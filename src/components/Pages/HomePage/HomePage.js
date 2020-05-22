@@ -25,7 +25,7 @@ const HomePage = ({ fetchCatalogHome, catalogHome }) => {
 							{
 								catalogHome.map(({ label, img, link }) => {
 									return (
-										<NavLink to={link} className="homepage-catalog__column" key={label}>
+										<NavLink to={`/${link}`} className="homepage-catalog__column" key={label}>
 											<div className="column-image">
 												<img src={img} alt="" />
 											</div>

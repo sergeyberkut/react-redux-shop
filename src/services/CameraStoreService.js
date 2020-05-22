@@ -1,8 +1,8 @@
 import { catalog, catalogHome, catalogSections } from './catalog'
 
-let id = 0
-catalogSections.forEach(item => {
-	item.id = ++id
+
+catalogSections.forEach((item, index) => {
+	item.id = index
 	if (!item.img) {
 		item.img = 'https://targoo.com.ua/oc-content/uploads/2/242.jpg.pagespeed.ce.wnlXILlvkq.jpg'
 	}
@@ -12,19 +12,37 @@ export default class CameraStoreService {
 
 	getBasketItems = () => JSON.parse(localStorage.getItem('basket')) || []
 
+
+
 	getCatalogHome = () => {
 		return new Promise(resolve => {
 			setTimeout(() => {
 				resolve(catalogHome)
+			}, 0)
+		})
+	}
+
+	getCatalogMenu = () => {
+		return new Promise(resolve => {
+			setTimeout(() => {
+				resolve(catalog)
 			}, 1000)
 		})
 	}
 
-	getCatalogMenu = () => catalog
-
 	getGoodByID = id => catalogSections.find(good => good.id === id)
 
-	getGoodList = category => catalogSections.filter(good => good.categoryName === category)
+	getGoodList = category => {
+		return new Promise(resolve => {
+			setTimeout(() => {
+				if (category === 'catalog') {
+					resolve(catalogSections)
+				}
+				const data = catalogSections.filter(good => good.categoryName === category)
+				resolve(data)
+			}, 700)
+		})
+	}
 
 	getLinks = () => catalog.map(({ link }) => link)
 

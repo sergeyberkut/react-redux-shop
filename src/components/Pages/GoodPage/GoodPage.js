@@ -3,7 +3,6 @@ import BuyBlock from '../../BuyBlock'
 
 const GoodPage = ({ product: { label, img, price, specification, nameSpecification, description, id } }) => {
 
-
 	return (
 		<div className="product">
 			<h1 className="product__title">{label}</h1>

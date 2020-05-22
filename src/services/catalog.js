@@ -1,28 +1,33 @@
-export const catalog = [{
-	label: 'AHD камеры',
-	img: 'https://proto-x.net/upload/iblock/703/ahd-cam.png',
-	link: 'ahd-cams'
-}, {
-	label: 'AHD видеорегистраторы',
-	img: 'https://proto-x.net/upload/iblock/7a8/ahd-registrators.png',
-	link: 'ahd-videoreg'
-}, {
-	label: 'IP Камеры',
-	img: 'https://proto-x.net/upload/iblock/1cf/ip.png',
-	link: 'ip-cams'
-}, {
-	label: 'Комплекты видеонаблюдения',
-	img: 'https://proto-x.net/upload/iblock/b01/combo.png',
-	link: 'cctv-kits'
-}, {
-	label: 'Носимые видеорегистраторы',
-	img: 'https://proto-x.net/upload/iblock/145/mobile-registrators.png',
-	link: 'mobile-videoreg'
-}, {
-	label: 'Решения для транспорта',
-	img: 'https://proto-x.net/upload/iblock/572/transport.png',
-	link: 'transport-solutions'
-}];
+export const catalog = [
+	{
+		label: 'Все товары',
+		img: 'https://proto-x.net/upload/iblock/572/transport.png',
+		link: 'catalog'
+	}, {
+		label: 'AHD камеры',
+		img: 'https://proto-x.net/upload/iblock/703/ahd-cam.png',
+		link: 'ahd-cams'
+	}, {
+		label: 'AHD видеорегистраторы',
+		img: 'https://proto-x.net/upload/iblock/7a8/ahd-registrators.png',
+		link: 'ahd-videoreg'
+	}, {
+		label: 'IP Камеры',
+		img: 'https://proto-x.net/upload/iblock/1cf/ip.png',
+		link: 'ip-cams'
+	}, {
+		label: 'Комплекты видеонаблюдения',
+		img: 'https://proto-x.net/upload/iblock/b01/combo.png',
+		link: 'cctv-kits'
+	}, {
+		label: 'Носимые видеорегистраторы',
+		img: 'https://proto-x.net/upload/iblock/145/mobile-registrators.png',
+		link: 'mobile-videoreg'
+	}, {
+		label: 'Решения для транспорта',
+		img: 'https://proto-x.net/upload/iblock/572/transport.png',
+		link: 'transport-solutions'
+	}];
 
 export const catalogHome = [{
 	label: 'AHD камеры от 52 рублей.',

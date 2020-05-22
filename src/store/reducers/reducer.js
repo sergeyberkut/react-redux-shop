@@ -1,7 +1,12 @@
 const initialState = {
 	error: null,
 	basket: [],
-	catalogHome: []
+	loadingGoods: true,
+	loadingMenu: true,
+	catalogHome: [],
+	catalogMenu: [],
+	goodsToShow: [],
+	modalVisible: false
 }
 
 const reducer = (state = initialState, { type, payload }) => {
@@ -21,10 +26,39 @@ const reducer = (state = initialState, { type, payload }) => {
 				...state,
 				basket: payload
 			}
-		case 'FETCH_CATALOG-HOME-SUCCESS':
+		case 'FETCH_CATALOG-HOME_SUCCESS':
 			return {
 				...state,
-				catalogHome: payload
+				loading: false,
+				catalogHome: payload,
+			}
+		case 'FETCH_CATALOG-HOME_REQUESTED':
+			return {
+				...state,
+				loading: true,
+				catalogHome: [],
+			}
+		case 'FETCH_CATALOG-MENU_SUCCESS':
+			return {
+				...state,
+				catalogMenu: payload,
+				loadingMenu: false,
+			}
+		case 'FETCH_GOODS-TO-SHOW_SUCCESS':
+			return {
+				...state,
+				loadingGoods: false,
+				goodsToShow: payload,
+			}
+		case 'FETCH_GOODS-TO-SHOW_REQUESTED':
+			return {
+				...state,
+				loadingGoods: true,
+			}
+		case 'ON_MODAL-VISIBLE_TOGGLE':
+			return {
+				...state,
+				modalVisible: !state.modalVisible
 			}
 		default:
 			return state

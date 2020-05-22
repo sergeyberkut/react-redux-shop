@@ -2,11 +2,17 @@ import {
 	onItemToBasketAdded,
 	basketLoaded,
 	basketItemCountChange,
-	fetchCatalogHome
+	fetchCatalogHome,
+	fetchCatalogMenu,
+	fetchGoodsToShow,
+	onModalVisibleToggle
 } from './actions'
 
 export {
 	onItemToBasketAdded,
+	onModalVisibleToggle,
+	fetchGoodsToShow,
+	fetchCatalogMenu,
 	basketLoaded,
 	basketItemCountChange,
 	fetchCatalogHome

@@ -12,6 +12,10 @@ import { withCameraStoreService } from '../Hoc'
 
 const Content = ({ camerastoreService, basketLoaded }) => {
 
+	// инкапсулировать получения данных из локалстораджа
+	// сделать поиск характеристик продукта не по сервисам а по стору
+	// 
+
 	useEffect(() => {
 		basketLoaded(camerastoreService.getBasketItems())
 	}, [basketLoaded, camerastoreService])
@@ -21,7 +25,7 @@ const Content = ({ camerastoreService, basketLoaded }) => {
 	const createCategoryRoutes = () => {
 		return routerLinks.map(type => {
 			return (
-				<Route key={type + type} path={`/${type}`} component={() => {
+				<Route key={type} path={`/${type}`} component={() => {
 					const productList = camerastoreService.getGoodList(type)
 					return (
 						<div className="main__content">
